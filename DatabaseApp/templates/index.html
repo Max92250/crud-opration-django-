@@ -1,0 +1,59 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+    {% load static %}  
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">  
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>    
+</head>  
+<style>
+  .container-fluid{
+
+    padding-left:30rem;
+    margin-top:5rem;
+    
+   
+  }
+</style>
+<body>  
+<form method="POST" class="post-form" action="/" enctype="multipart/form-data">  
+        {% csrf_token %}  
+    <div class="container-fluid">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Enter Details</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Employee Id:</label>  
+    <div class="col-sm-4" >  
+      {{ form.eid }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Employee Name:</label>  
+    <div class="col-sm-4">  
+      {{ form.ename }}  
+    </div>  
+  </div>  
+    
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Employee Contact:</label>  
+    <div class="col-sm-4">  
+      {{ form.econtact }}  
+    </div>  
+  </div>  
+  {{form.image}}
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary" style="margin-top:10px;margin-left:30px">Submit</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+</body>  
+</html>  
